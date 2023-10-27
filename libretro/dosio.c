@@ -11,7 +11,11 @@
 #if defined(WIN32)
 #include <direct.h>
 #else
+#if defined(SF2000)
+#include "../../../dirent.h"
+#else
 #include <dirent.h>
+#endif
 #endif
 
 static	char	curpath[MAX_PATH] = "./";
